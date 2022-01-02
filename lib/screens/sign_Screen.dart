@@ -24,6 +24,7 @@ class _sign_ScreenState extends State<sign_Screen> {
   String email;
   String password;
   String number;
+  bool isInvalidLogin = false;
   bool spinner = false;
   bool state = true;
   bool absorb = false;
@@ -92,6 +93,22 @@ class _sign_ScreenState extends State<sign_Screen> {
                                 SizedBox(
                                     height: MediaQuery.of(context).size.height *
                                         0.04),
+                                Padding(
+                                  padding: signPadding,
+                                  child: Visibility(
+                                    child: Center(
+                                      child: Text(
+                                        "Invalid email/password",
+                                        style: TextStyle(
+                                          color: Colors.red,
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.w300,
+                                        ),
+                                      ),
+                                    ),
+                                    visible: isInvalidLogin,
+                                  ),
+                                ),
                                 Padding(
                                   padding: signPadding,
                                   child: TextFormField(
@@ -170,6 +187,7 @@ class _sign_ScreenState extends State<sign_Screen> {
                                       } on Exception {
                                         setState(() {
                                           spinner = false;
+                                          isInvalidLogin = true;
                                         });
                                       }
                                     }

@@ -82,6 +82,7 @@ class _registration_ScreenState extends State<registration_Screen> {
                           SizedBox(
                             height: MediaQuery.of(context).size.height * 0.02,
                           ),
+
                           Padding(
                             padding: signPadding,
                             child: TextFormField(
