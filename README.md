@@ -1,6 +1,9 @@
 # naariAndroid
 
-A new Flutter project.
+<img src="./snapshots/login.jpg" height="600px"/>
+<img src="./snapshots/home.jpg" height="600px"/>
+<img src="./snapshots/calendar.jpg" height="600px"/>
+
 
 ## Getting Started
 
